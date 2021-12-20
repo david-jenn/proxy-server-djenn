@@ -1,0 +1,27 @@
+{
+  "name": "proxy-server-djenn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "nodemon -r dotenv/config server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidJenn/proxy-server-djenn.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidJenn/proxy-server-djenn/issues"
+  },
+  "homepage": "https://github.com/DavidJenn/proxy-server-djenn#readme",
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-rate-limit": "^5.5.1",
+    "needle": "^3.0.0"
+  }
+}
