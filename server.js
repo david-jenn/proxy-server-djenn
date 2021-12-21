@@ -17,6 +17,7 @@ const app = express();
 // app.set('trust proxy', 1);
 
 // Routes
+//TO Fix deployment
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", `${process.env.FRONT_END_ACCESS}`);
   res.header(
