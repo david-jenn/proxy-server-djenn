@@ -22,7 +22,7 @@ const app = express();
 app.use('/', express.static('public', { index: 'index.html' }));
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", `https://api.openweathermap.org/data/2.5/weather`);  
+  res.setHeader("Access-Control-Allow-Origin", `https://weather-app-david-jenn.herokuapp.com`);  
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
