@@ -47,7 +47,7 @@ router.get('/hourly', async (req, res, next) => {
     //convert unix timestamp to day of the week
     for (let i = 0; i < 8; ++i) {
      const day = data.daily[i];
-     convertedTime = new Date(day.dt * 1000);
+     const convertedTime = new Date(day.dt * 1000);
      day.convertedTime = moment(convertedTime).format('dddd');
      console.log("converting");
      data.daily[i].convertedTime = day.convertedTime;
@@ -56,11 +56,11 @@ router.get('/hourly', async (req, res, next) => {
     //convert unix timestamp to hours of the day
     for(let i = 0; i < 48; ++i) {
       const hour = data.hourly[i];
-      convertedTime = new Date(hour.dt * 1000);
+      const convertedTime = new Date(hour.dt * 1000);
       hour.convertedTime = moment(convertedTime).format('LT');
       data.hourly[i].convertedTime = hour.convertedTime;
     }
-    //console.log(data);
+    console.log(data);
     res.status(200).json(data);
    
   } catch (err) {
