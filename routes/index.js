@@ -23,15 +23,8 @@ router.get('/weather', async (req, res, next) => {
     });
     const apiRes = await needle('get', `${API_BASE_URL}?${params}`);
     const data = apiRes.body;
-    const hello = {
-      hello: "hello"
-    }
-
-    // if(process.env.NODE_ENV !== 'production') {
-    //   console.log(`REQUEST: ${API_BASE_URL}?${params}`)
-    // } 
-    //console.log(data);
-    res.status(200).json(hello);
+   
+    res.status(200).json(data);
    
   } catch (err) {
     res.status(500).json({ Error: err });
