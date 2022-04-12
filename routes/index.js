@@ -54,12 +54,12 @@ router.get('/hourly', async (req, res, next) => {
     }
 
     //convert unix timestamp to hours of the day
-    for(let i = 0; i < 48; ++i) {
-      const hour = data.hourly[i];
-      const convertedTime = new Date(hour.dt * 1000);
-      hour.convertedTime = moment(convertedTime).format('LT');
-      data.hourly[i].convertedTime = hour.convertedTime;
-    }
+    // for(let i = 0; i < 48; ++i) {
+    //   const hour = data.hourly[i];
+    //   const convertedTime = new Date(hour.dt * 1000);
+    //   hour.convertedTime = moment(convertedTime).format('LT');
+    //   data.hourly[i].convertedTime = hour.convertedTime;
+    // }
     console.log(data);
     res.status(200).json(data);
    
