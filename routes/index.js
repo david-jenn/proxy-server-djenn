@@ -15,7 +15,7 @@ const API_HOURLY_URL = process.env.API_HOURLY_URL;
 //Init cache 
 
 
-router.get('/', async (req, res, next) => {
+router.get('/weather', async (req, res, next) => {
   try {
     const params = new URLSearchParams({
       [API_KEY_NAME]: API_KEY_VALUE,
