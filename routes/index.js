@@ -31,7 +31,7 @@ router.get('/weather', async (req, res, next) => {
     res.status(200).json(data);
    
   } catch (err) {
-    res.status(500).json({ Error: "got to this route?" });
+    res.status(500).json({ Error: err });
 
   }
 });
