@@ -21,9 +21,9 @@ router.get('/weather', async (req, res, next) => {
       [API_KEY_NAME]: API_KEY_VALUE,
       ...req.query,
     });
-    // const apiRes = await needle('get', `${API_BASE_URL}?${params}`);
-    //const data = apiRes.body;
-    const data = {
+    const apiRes = await needle('get', `${API_BASE_URL}?${params}`);
+    const data = apiRes.body;
+    const hello = {
       hello: "hello"
     }
 
@@ -31,7 +31,7 @@ router.get('/weather', async (req, res, next) => {
     //   console.log(`REQUEST: ${API_BASE_URL}?${params}`)
     // } 
     //console.log(data);
-    res.status(200).json(data);
+    res.status(200).json(hello);
    
   } catch (err) {
     res.status(500).json({ Error: err });
